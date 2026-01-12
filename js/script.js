@@ -18,14 +18,7 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
 
-// Sticky navbar on scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+// Consolidated scroll handler moved to end of file for performance
 
 // Mobile menu toggle
 hamburger.addEventListener('click', () => {
@@ -64,7 +57,7 @@ function activateNavLink() {
     });
 }
 
-window.addEventListener('scroll', activateNavLink);
+// Active navigation link on scroll (consolidated below)
 
 // ================================
 // Hero Section - Typing Effect
@@ -227,7 +220,8 @@ contactForm.addEventListener('submit', (e) => {
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
     
-    // Show success message (in a real app, this would send to a server)
+    // TODO: In production, send form data to a backend service or email API
+    // For now, show success message as placeholder functionality
     showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
     
     // Reset form
@@ -299,13 +293,7 @@ document.head.appendChild(style);
 
 const backToTopBtn = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.classList.add('visible');
-    } else {
-        backToTopBtn.classList.remove('visible');
-    }
-});
+// Back to top button visibility (consolidated below)
 
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
@@ -349,19 +337,7 @@ projectCards.forEach(card => {
     });
 });
 
-// ================================
-// Parallax Effect for Hero Section
-// ================================
-
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    
-    if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / 600);
-    }
-});
+// Parallax effect for Hero Section (consolidated below)
 
 // ================================
 // Form Input Animations
@@ -399,35 +375,55 @@ console.log('%cInterested in how this was built?', 'color: #764ba2; font-size: 1
 console.log('%cFeel free to reach out!', 'color: #f093fb; font-size: 14px;');
 
 // ================================
-// Performance Optimization
+// Performance Optimization - Consolidated Scroll Handler
 // ================================
 
-// Debounce function for scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
+// Consolidate all scroll operations into one optimized handler
+let scrollTimeout;
+const heroContent = document.querySelector('.hero-content');
+
+function handleAllScrollOperations() {
+    const scrollY = window.pageYOffset;
+    
+    // Sticky navbar
+    if (scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Active navigation link
+    activateNavLink();
+    
+    // Back to top button
+    if (scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+    }
+    
+    // Parallax effect for hero section
+    if (heroContent && scrollY < window.innerHeight) {
+        heroContent.style.transform = `translateY(${scrollY * 0.5}px)`;
+        heroContent.style.opacity = 1 - (scrollY / 600);
+    }
 }
 
-// Use debounced scroll for heavy operations
-const debouncedScroll = debounce(() => {
-    // Any heavy scroll operations can go here
-}, 100);
-
-window.addEventListener('scroll', debouncedScroll);
+// Use requestAnimationFrame for smooth 60fps performance
+window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(handleAllScrollOperations);
+});
 
 // ================================
 // Initialize All Functions
 // ================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Website initialized successfully! 🚀');
+    // Set dynamic copyright year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
     
     // Add fade-in class to body
     document.body.style.opacity = '0';
