@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritesh Badgoti | Founder & Visionary</title>
+    <meta name="description"
+        content="Ritesh Badgoti - Founder of The Campus, UPSC Aspirant, Writer. Guided by Buddha's wisdom and Naruto's spirit of perseverance.">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- SVG Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="chakra-spinner"></div>
+            <span class="loader-text">Will of Fire</span>
+            <span class="loader-subtext">Loading...</span>
+        </div>
+    </div>
+
+    <div class="glow-overlay"></div>
+    <div class="particle-container" id="particles"></div>
+    <div class="lotus-container" id="lotusParticles"></div>
+
+    <!-- Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-logo">RB</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#nindo">Nindo</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#journey">Journey</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#social">Connect</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#hero">Home</a>
+            <a href="#nindo">Nindo</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#journey">Journey</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#social">Connect</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-image">
+                <img src="./hero_bg.png" alt="Zen & Willpower">
+            </div>
+            <div class="hero-content">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="chakra-pulse"></div>
+                    <img src="./Snapchat-1210909261.png" alt="Ritesh Badgoti" class="hero-avatar">
+                    <div class="avatar-badge">
+                        <span>Founder</span>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-name">
+                        <span class="name-line">Ritesh Badgoti</span>
+                        <span class="name-accent">(Koli)</span>
+                    </h1>
+                    <p class="hero-tagline" id="heroTagline">Where Peace Meets Perseverance</p>
+                    <div class="hero-roles">
+                        <span class="role-tag">Founder@The Campus</span>
+                        <span class="role-tag">UPSC Aspirant</span>
+                        <span class="role-tag">Writer</span>
+                    </div>
+                    <a href="#contact" class="hero-cta fire-btn">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Nindo Section - My Ninja Way -->
+        <section id="nindo" class="nindo-section">
+            <div class="lotus-decoration left"></div>
+            <div class="lotus-decoration right"></div>
+            <h2 class="section-title">My Nindo</h2>
+            <p class="section-subtitle">The Way of Life</p>
+
+            <div class="nindo-scroll">
+                <div class="scroll-ornament top"></div>
+                <div class="nindo-content">
+                    <blockquote class="nindo-quote">
+                        "I believe in the power of persistent effort, guided by wisdom and fueled by an unwavering
+                        spirit.
+                        Like the stream that carves through rock, I move forward with patience. Like the fire that never
+                        dies, I carry the will to protect and uplift those around me."
+                    </blockquote>
+                    <div class="nindo-values">
+                        <div class="nindo-value">
+                            <div class="value-icon"><i class="fas fa-infinity"></i></div>
+                            <h4>Perseverance</h4>
+                            <p>Never giving up, no matter how tough the path</p>
+                        </div>
+                        <div class="nindo-value">
+                            <div class="value-icon"><i class="fas fa-brain"></i></div>
+                            <h4>Wisdom</h4>
+                            <p>Seeking knowledge and enlightenment daily</p>
+                        </div>
+                        <div class="nindo-value">
+                            <div class="value-icon"><i class="fas fa-heart"></i></div>
+                            <h4>Compassion</h4>
+                            <p>Lifting others as I rise on my journey</p>
+                        </div>
+                        <div class="nindo-value">
+                            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                            <h4>Integrity</h4>
+                            <p>Staying true to my word, always</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-ornament bottom"></div>
+            </div>
+        </section>
+
+        <!-- Quote Carousel -->
+        <section class="quote-carousel-section">
+            <div class="quote-carousel" id="quoteCarousel">
+                <div class="quote-slide active">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"The mind is everything. What you think, you become."</p>
+                    <span class="quote-author">— Buddha</span>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"I'm not gonna run away. I never go back on my word. That's my nindo, my ninja way!"</p>
+                    <span class="quote-author">— Naruto Uzumaki</span>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Peace comes from within. Do not seek it without."</p>
+                    <span class="quote-author">— Buddha</span>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"When people are protecting something truly special to them, they truly can become as strong as
+                        they can be."</p>
+                    <span class="quote-author">— Naruto Uzumaki</span>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Three things cannot be long hidden: the sun, the moon, and the truth."</p>
+                    <span class="quote-author">— Buddha</span>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Hard work is worthless for those that don't believe in themselves."</p>
+                    <span class="quote-author">— Naruto Uzumaki</span>
+                </div>
+            </div>
+            <div class="quote-nav">
+                <button class="quote-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="quote-dots" id="quoteDots"></div>
+                <button class="quote-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy-section">
+            <h2 class="section-title">My Philosophy</h2>
+            <p class="section-subtitle">Guided by ancient wisdom and modern determination</p>
+
+            <div class="philosophy-grid">
+                <!-- Buddha Card -->
+                <div class="philosophy-card buddha-card">
+                    <div class="card-image-wrapper">
+                        <img src="./buddha_hero.png" alt="Buddha - Inner Peace" class="card-image">
+                        <div class="card-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon zen-icon">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <h3>Inner Peace</h3>
+                        <p class="card-quote">"The mind is everything; what you think, you become."</p>
+                        <p class="card-desc">Guided by Buddhist principles of mindfulness and wisdom. Finding serenity
+                            amidst chaos and cultivating a peaceful mind.</p>
+                        <div class="card-tags">
+                            <span>Mindfulness</span>
+                            <span>Wisdom</span>
+                            <span>Compassion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Naruto Card -->
+                <div class="philosophy-card naruto-card">
+                    <div class="card-image-wrapper">
+                        <img src="./image.png" alt="Naruto - Unfailing Spirit" class="card-image">
+                        <div class="card-overlay naruto-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon fire-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Unfailing Spirit</h3>
+                        <p class="card-quote">"I'm not gonna run away. I never go back on my word."</p>
+                        <p class="card-desc">Driven by the "Will of Fire" – Perseverance, dedication, and the courage to
+                            never back down from a challenge.</p>
+                        <div class="card-tags">
+                            <span>Perseverance</span>
+                            <span>Courage</span>
+                            <span>Loyalty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline Section -->
+        <section id="journey" class="journey-section">
+            <h2 class="section-title">The Journey</h2>
+            <p class="section-subtitle">Milestones on the path of a shinobi</p>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-marker">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h3>Published First Artwork</h3>
+                        <p>Shared my first poem, marking the beginning of my creative expression and artistic journey.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-marker">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2022</span>
+                        <h3>Started UPSC Preparation</h3>
+                        <p>Embarked on the challenging path of civil services preparation with focus on governance and
+                            public policy.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3>Completed B.Sc. Physics Honours</h3>
+                        <p>Graduated from Maharaja College, Jaipur with a degree in Physics Honours.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3>Founded The Campus</h3>
+                        <p>Started an educational platform to empower students with modern learning tools and community
+                            support.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker">
+                        <i class="fas fa-dharmachakra"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3>Inspired by Buddha & Naruto</h3>
+                        <p>Found profound inspiration in Buddhist philosophy and Naruto's spirit of perseverance,
+                            shaping my path forward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills/Jutsu Section -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Techniques mastered on my journey</p>
+
+            <div class="skills-grid">
+                <div class="skill-card s-rank">
+                    <div class="skill-rank">S</div>
+                    <div class="skill-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Leadership</h3>
+                    <p>Founding and leading The Campus, inspiring teams and building vision</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card s-rank">
+                    <div class="skill-rank">S</div>
+                    <div class="skill-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Community Building</h3>
+                    <p>Creating and nurturing student networks and learning communities</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 92%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card a-rank">
+                    <div class="skill-rank">A</div>
+                    <div class="skill-icon"><i class="fas fa-feather-alt"></i></div>
+                    <h3>Writing</h3>
+                    <p>Creative and academic writing, crafting compelling narratives</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card a-rank">
+                    <div class="skill-rank">A</div>
+                    <div class="skill-icon"><i class="fas fa-chess"></i></div>
+                    <h3>Strategy</h3>
+                    <p>UPSC preparation, long-term planning, and analytical thinking</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card b-rank">
+                    <div class="skill-rank">B</div>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Technology</h3>
+                    <p>Digital tools, web development, and platform management</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card a-rank">
+                    <div class="skill-rank">A</div>
+                    <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Public Speaking</h3>
+                    <p>Engaging audiences and communicating ideas effectively</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="--fill-width: 82%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <!-- The Campus -->
+                <a href="https://www.thecampus.in" target="_blank" class="about-card campus-card">
+                    <div class="campus-logo">
+                        <img src="./Make_some_variety_with_same_colours_and_same_des-removebg-preview.png"
+                            alt="The Campus Logo">
+                    </div>
+                    <div class="about-content">
+                        <h3>The Campus</h3>
+                        <p>Building the future of education. Empowering students with modern tools and community-driven
+                            learning.</p>
+                        <span class="card-link">Visit thecampus.in <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+
+                <!-- UPSC Card -->
+                <div class="about-card upsc-card">
+                    <div class="about-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="about-content">
+                        <h3>National Vision</h3>
+                        <p>UPSC Aspirant with a focus on governance, public policy, and social impact. Dedicated to
+                            serving the nation.</p>
+                    </div>
+                </div>
+
+                <!-- Writer Card -->
+                <div class="about-card writer-card">
+                    <div class="about-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <div class="about-content">
+                        <h3>The Pen</h3>
+                        <p>Creative and academic writer exploring themes of technology, philosophy, and personal growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Gallery Card -->
+                <div class="about-card gallery-card">
+                    <div class="gallery-images">
+                        <img src="./3-30175_naruto-uzumaki-is-a-shinobi-of-konohagakure-naruto.png"
+                            alt="Naruto Inspiration" class="gallery-img-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="social" class="social-section">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Find me on social media</p>
+
+            <div class="social-grid">
+                <a href="https://www.facebook.com/riteshbadgoti" target="_blank" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">Facebook</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+
+                <a href="https://www.instagram.com/riteshbadgoti" target="_blank" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+
+                <a href="https://www.twitter.com/riteshbadgoti" target="_blank" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-x-twitter"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">Twitter / X</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/riteshbadgoti" target="_blank" class="social-card linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">LinkedIn</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+
+                <a href="https://t.me/riteshbadgoti" target="_blank" class="social-card telegram">
+                    <div class="social-icon">
+                        <i class="fab fa-telegram-plane"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">Telegram</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+
+                <a href="https://www.snapchat.com/add/riteshbadgoti" target="_blank" class="social-card snapchat">
+                    <div class="social-icon">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-name">Snapchat</span>
+                        <span class="social-handle">@riteshbadgoti</span>
+                    </div>
+                    <i class="fas fa-arrow-right social-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Have a question or want to work together? Drop me a message!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>riteshbadgoti@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"In the confrontation between the stream and the rock, the stream always wins – not through
+                            strength, but through persistence."</p>
+                        <span>— Buddha</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                                required></textarea>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn fire-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">RB</span>
+                <p>Crafted with Intent & Purpose</p>
+            </div>
+            <div class="konoha-seal">
+                <svg viewBox="0 0 100 100" class="leaf-icon">
+                    <path d="M50 5 C25 25 15 50 50 95 C85 50 75 25 50 5" fill="none" stroke="currentColor"
+                        stroke-width="2" />
+                </svg>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/riteshbadgoti" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/riteshbadgoti" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/riteshbadgoti" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/riteshbadgoti" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ritesh Badgoti. All Rights Reserved.</p>
+            <p class="footer-motto">The One Who Inherits the Will of Fire</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
